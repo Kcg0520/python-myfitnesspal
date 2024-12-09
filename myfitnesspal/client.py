@@ -90,7 +90,7 @@ class Client(MFPBase):
         else:
             for domain_name in self.COOKIE_DOMAINS:
                 self.session.cookies.update(
-                    browser_cookie3.load(domain_name=domain_name)
+                    browser_cookie3.firefox(domain_name=domain_name)
                 )
 
         self._auth_data = self._get_auth_data()
